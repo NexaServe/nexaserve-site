@@ -68,3 +68,62 @@ footer { background: #003366; color: white; text-align: center; padding: 15px 0;
   .nav-links.active { display: flex; }
   .hamburger { display: flex; }
 }
+
+/* =========================
+   FREE TRIAL SECTION
+========================= */
+
+.trial-section {
+  background: #f8fafc;
+  padding: 80px 20px;
+}
+
+.trial-section .container {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.trial-section p {
+  color: #555;
+  margin-bottom: 30px;
+  font-size: 1rem;
+}
+
+/* Form */
+.trial-section form {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Inputs */
+.trial-section input,
+.trial-section textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-family: "Inter", sans-serif;
+  font-size: 0.95rem;
+}
+
+.trial-section input:focus,
+.trial-section textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+/* Button */
+.trial-section button {
+  margin-top: 10px;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
