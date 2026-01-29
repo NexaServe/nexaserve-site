@@ -111,8 +111,47 @@ body {
 }
 ct-form button { border: none; cursor: pointer; }
 
-/* FOOTER */
-footer { background: #003366; color: white; text-align: center; padding: 15px 0; }
+/* =========================
+   FOOTER STYLES
+========================= */
+
+.site-footer {
+  background: #0f172a;
+  color: #cbd5f5;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.footer-brand {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.footer-contact a {
+  color: #93c5fd;
+  text-decoration: none;
+}
+
+.footer-contact a:hover {
+  text-decoration: underline;
+}
+
+.divider {
+  margin: 0 8px;
+  color: #64748b;
+}
+
+.footer-note {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  margin-top: 8px;
+}
+
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
