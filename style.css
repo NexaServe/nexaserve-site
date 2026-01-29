@@ -1,54 +1,171 @@
+/* =========================
+   GLOBAL STYLES
+========================= */
+
 body {
   font-family: 'Inter', sans-serif;
   margin: 0;
   padding: 0;
   line-height: 1.6;
   color: #222;
-  background: #f8fafc; /* 🔑 THIS IS THE FIX */
+  background: #f8fafc;
 }
 
-.container { width: 90%; max-width: 1200px; margin: auto; }
-.section { padding: 60px 0; }
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.section {
+  padding: 60px 0;
+}
+
 .section-title {
-  font-size: 2rem; font-weight: 800; text-align: center;
-  margin-bottom: 40px; color: #003366;
+  font-size: 2rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #003366;
 }
-
-/* HEADER */
-.header { background: #003366; color: #fff; padding: 15px 0; }
-.logo { font-size: 1.8rem; font-weight: 800; margin: 0; }
-.nav-container { display: flex; justify-content: space-between; align-items: center; }
-.nav-links { list-style: none; display: flex; gap: 20px; margin: 0; padding: 0; }
-.nav-links li a { color: white; text-decoration: none; font-weight: 600; }
-.nav-links li a:hover { text-decoration: underline; }
-
-/* HAMBURGER */
-.hamburger { display: none; flex-direction: column; cursor: pointer; }
-.hamburger span { height: 3px; width: 25px; background: white; margin: 4px 0; transition: 0.4s; }
-.hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
-.hamburger.active span:nth-child(2) { opacity: 0; }
-.hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
-
-/* HERO */
-.hero { background: linear-gradient(to right, #003366, #0055aa); color: white; text-align: center; padding: 80px 20px; }
-.hero h2 { font-size: 2.5rem; margin-bottom: 15px; }
-.hero p { font-size: 1.2rem; margin-bottom: 25px; }
-.btn-primary { display: inline-block; background: #ffcc00; color: #003366; padding: 12px 25px; font-weight: 600; text-decoration: none; border-radius: 5px; }
-.btn-primary:hover { background: #ffdb4d; }
-
-/* CARDS GRID */
-.why-grid, .service-grid, .values-grid, .pricing-grid, .mv-grid {
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;
-}
-.why-card, .service-card, .value-card, .pricing-card, .mv-card {
-  background: #f9f9f9; padding: 20px; border-radius: 8px; box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
-}
-
-/* PRICING */
-.price { font-size: 1.5rem; font-weight: 800; color: #003366; }
 
 /* =========================
-   FREE TRIAL – FIXED STYLES
+   HEADER & NAV
+========================= */
+
+.header {
+  background: #003366;
+  color: white;
+  padding: 15px 0;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.nav-links li a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   HAMBURGER
+========================= */
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background: white;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  background: linear-gradient(to right, #003366, #0055aa);
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+
+.btn-primary {
+  display: inline-block;
+  background: #ffcc00;
+  color: #003366;
+  padding: 12px 25px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: #ffdb4d;
+}
+
+/* =========================
+   GRIDS & CARDS
+========================= */
+
+.why-grid,
+.service-grid,
+.values-grid,
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+}
+
+.why-card,
+.service-card,
+.value-card,
+.pricing-card {
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+.why-card h3,
+.value-card h3,
+.service-card h3 {
+  color: #003366;
+  margin-bottom: 10px;
+}
+
+/* =========================
+   PRICING
+========================= */
+
+.price {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #003366;
+}
+
+/* =========================
+   FREE TRIAL
 ========================= */
 
 .trial-section {
@@ -64,18 +181,16 @@ body {
   margin-top: 30px;
   background: #ffffff;
   padding: 32px;
-  border-radius: 14px;
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.08);
 }
 
-/* Trial form layout */
 .trial-card form {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
-/* Override global input styles ONLY here */
 .trial-card input,
 .trial-card textarea {
   width: 100%;
@@ -92,36 +207,22 @@ body {
   border-color: #2563eb;
 }
 
-/* Button */
-.trial-card button {
-  margin-top: 10px;
-}
-
-/* Trust note */
 .trial-note {
   margin-top: 14px;
   font-size: 0.85rem;
   color: #6b7280;
 }
 
-/* Mobile fix */
-@media (max-width: 600px) {
-  .trial-card {
-    padding: 24px;
-  }
-}
-ct-form button { border: none; cursor: pointer; }
-
 /* =========================
-   FOOTER STYLES (MATCHED)
+   FOOTER (MATCHED)
 ========================= */
 
 .site-footer {
-  background: #f8fafc;          /* MATCHES PAGE */
-  color: #222;                  /* readable text */
+  background: #f8fafc;
+  color: #222;
   padding: 40px 20px;
   text-align: center;
-  border-top: 1px solid #e5e7eb; /* subtle separation */
+  border-top: 1px solid #e5e7eb;
 }
 
 .footer-container {
@@ -155,15 +256,29 @@ ct-form button { border: none; cursor: pointer; }
   margin-top: 8px;
 }
 
+/* =========================
+   RESPONSIVE
+========================= */
 
-
-/* RESPONSIVE */
 @media (max-width: 768px) {
   .nav-links {
-    position: absolute; top: 60px; right: 0; background: #003366;
-    flex-direction: column; width: 200px; text-align: right; padding: 20px; display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #003366;
+    flex-direction: column;
+    width: 200px;
+    text-align: right;
+    padding: 20px;
+    display: none;
   }
-  .nav-links.active { display: flex; }
-  .hamburger { display: flex; }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
 }
 
