@@ -112,14 +112,15 @@ body {
 ct-form button { border: none; cursor: pointer; }
 
 /* =========================
-   FOOTER STYLES
+   FOOTER STYLES (MATCHED)
 ========================= */
 
 .site-footer {
-  background: #222;
-  color: #222;
+  background: #f8fafc;          /* MATCHES PAGE */
+  color: #222;                  /* readable text */
   padding: 40px 20px;
   text-align: center;
+  border-top: 1px solid #e5e7eb; /* subtle separation */
 }
 
 .footer-container {
@@ -130,10 +131,11 @@ ct-form button { border: none; cursor: pointer; }
 .footer-brand {
   font-weight: 600;
   margin-bottom: 10px;
+  color: #003366;
 }
 
 .footer-contact a {
-  color: #93c5fd;
+  color: #2563eb;
   text-decoration: none;
 }
 
@@ -143,14 +145,15 @@ ct-form button { border: none; cursor: pointer; }
 
 .divider {
   margin: 0 8px;
-  color: #64748b;
+  color: #94a3b8;
 }
 
 .footer-note {
   font-size: 0.85rem;
-  color: #94a3b8;
+  color: #64748b;
   margin-top: 8px;
 }
+
 
 
 /* RESPONSIVE */
