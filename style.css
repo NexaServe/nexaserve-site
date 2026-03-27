@@ -6,7 +6,8 @@
 }
 
 body {
-  background: #f7f7f7;
+  background: #f9fafb;
+  color: #111;
 }
 
 /* NAVBAR */
@@ -14,8 +15,8 @@ body {
   position: fixed;
   width: 100%;
   backdrop-filter: blur(10px);
-  background: rgba(255,255,255,0.7);
-  border-bottom: 1px solid rgba(0,0,0,0.05);
+  background: rgba(255,255,255,0.85);
+  border-bottom: 1px solid #eee;
   z-index: 1000;
 }
 
@@ -41,7 +42,7 @@ body {
 
 .nav-links a {
   text-decoration: none;
-  color: #000;
+  color: #111;
 }
 
 /* HAMBURGER */
@@ -56,20 +57,6 @@ body {
   width: 25px;
   height: 3px;
   background: #000;
-  transition: 0.3s;
-}
-
-/* ANIMATION */
-.hamburger.active span:nth-child(1) {
-  transform: rotate(45deg) translate(5px,5px);
-}
-
-.hamburger.active span:nth-child(2) {
-  opacity: 0;
-}
-
-.hamburger.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(5px,-5px);
 }
 
 /* MOBILE */
@@ -102,15 +89,11 @@ body {
   width: 100%;
   height: 100%;
   background: rgba(0,0,0,0.3);
-  backdrop-filter: blur(5px);
-  opacity: 0;
-  visibility: hidden;
-  transition: 0.3s;
+  display: none;
 }
 
 .overlay.active {
-  opacity: 1;
-  visibility: visible;
+  display: block;
 }
 
 /* HERO */
@@ -120,20 +103,31 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: linear-gradient(#fff, #f3f4f6);
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 40px;
+}
+
+.hero p {
+  color: #555;
+  margin-top: 10px;
 }
 
 /* BUTTON */
 .btn-primary {
-  padding: 12px 25px;
-  background: black;
-  color: white;
-  text-decoration: none;
+  padding: 14px 30px;
+  background: linear-gradient(135deg, #d4af37, #f5d76e);
+  color: black;
   margin-top: 20px;
-  border: none;
-  cursor: pointer;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
 }
 
-/* SECTION */
+/* SECTIONS */
 .section {
   padding: 80px 20px;
   text-align: center;
@@ -143,15 +137,24 @@ body {
   display: flex;
   gap: 20px;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 30px;
   flex-wrap: wrap;
 }
 
+/* CARDS */
 .card {
   background: white;
-  padding: 20px;
-  border-radius: 10px;
-  min-width: 200px;
+  padding: 25px;
+  border-radius: 12px;
+  min-width: 220px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+/* PRICE */
+.price {
+  font-size: 26px;
+  font-weight: 700;
+  margin-top: 10px;
 }
 
 /* TOGGLE */
@@ -174,7 +177,7 @@ body {
 
 .slider {
   position: absolute;
-  background: #ccc;
+  background: #ddd;
   width: 100%;
   height: 100%;
   border-radius: 25px;
@@ -206,7 +209,19 @@ form {
 }
 
 input, textarea {
-  padding: 10px;
-  border: 1px solid #ddd;
+  padding: 12px;
   border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+/* FOOTER */
+footer {
+  background: #111;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+footer a {
+  color: #d4af37;
 }
