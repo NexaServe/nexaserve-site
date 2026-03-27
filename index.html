@@ -1,28 +1,29 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <title>NexaServe – Fractional Customer & Admin Support (South Africa)</title>
-  <meta name="description" content="Fractional customer service & admin support for small businesses in South Africa." />
+  <title>NexaServe – Fractional Customer & Admin Support</title>
+  <meta name="description" content="Fractional customer service & admin support for small businesses in South Africa."/>
 
-  <!-- ✅ FIXED FAVICON -->
-  <link rel="icon" type="image/png" href="/favicon.png">
+  <!-- FAVICON -->
+  <link rel="icon" href="/favicon.png" type="image/png">
 
-  <!-- STYLES -->
-  <link rel="stylesheet" href="style.css" />
+  <!-- FONT -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-</head>
 
-  <!-- STYLES -->
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- HEADER -->
+<div class="overlay" id="overlay"></div>
+
 <header class="header">
   <div class="container nav-container">
     <h1 class="logo">NexaServe</h1>
@@ -31,193 +32,128 @@
       <ul class="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#services">Services</a></li>
-        <li><a href="#why-us">Why Us</a></li>
         <li><a href="#pricing">Pricing</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#trial">Free Trial</a></li>
       </ul>
     </nav>
 
-    <div class="hamburger">
+    <div class="hamburger" id="hamburger">
       <span></span><span></span><span></span>
     </div>
   </div>
 </header>
 
-<!-- HERO -->
 <section id="home" class="hero">
-  <h2>Fractional Customer & Admin Support for Small Businesses</h2>
-  <p>Professional support without the cost or commitment of full-time staff.</p>
-  <a href="#pricing" class="btn-primary">View Pricing</a>
+  <h2 data-aos="fade-up">Fractional Customer & Admin Support</h2>
+  <p data-aos="fade-up" data-aos-delay="100">Professional support without full-time costs.</p>
+  <a href="#pricing" class="btn-primary" data-aos="fade-up" data-aos-delay="200">View Pricing</a>
 </section>
 
-<!-- SERVICES -->
 <section id="services" class="section">
-  <div class="container">
-    <h2 class="section-title">What We Help With</h2>
-
-    <div class="service-grid">
-      <div class="service-card">
-        <h3>Customer Email Support</h3>
-        <p>Professional, brand-aligned responses to your customers.</p>
-      </div>
-
-      <div class="service-card">
-        <h3>Admin Tasks</h3>
-        <p>Invoicing, scheduling, follow-ups, and CRM updates.</p>
-      </div>
-
-      <div class="service-card">
-        <h3>Weekly Reports</h3>
-        <p>Clear summaries of completed work and customer insights.</p>
-      </div>
-    </div>
+  <h2>Services</h2>
+  <div class="grid">
+    <div class="card" data-aos="fade-up">Customer Email Support</div>
+    <div class="card" data-aos="fade-up" data-aos-delay="100">Admin Tasks</div>
+    <div class="card" data-aos="fade-up" data-aos-delay="200">Weekly Reports</div>
   </div>
 </section>
 
-<!-- WHY CHOOSE US -->
-<section id="why-us" class="section">
-  <div class="container">
-    <h2 class="section-title">Why Choose NexaServe</h2>
-
-    <div class="why-grid">
-      <div class="why-card">
-        <h3>Fractional & Flexible</h3>
-        <p>Get expert support without hiring full-time staff.</p>
-      </div>
-
-      <div class="why-card">
-        <h3>Predictable Pricing</h3>
-        <p>Simple monthly packages with no hidden costs.</p>
-      </div>
-
-      <div class="why-card">
-        <h3>Reliable Response Times</h3>
-        <p>Guaranteed 12–24 hour responses during support hours.</p>
-      </div>
-
-      <div class="why-card">
-        <h3>South Africa Based</h3>
-        <p>Local understanding with global professionalism.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PRICING -->
 <section id="pricing" class="section">
-  <div class="container">
-    <h2 class="section-title">Simple, Predictable Pricing</h2>
+  <h2>Pricing</h2>
 
-    <div class="pricing-grid">
-      <div class="pricing-card">
-        <h3>Starter</h3>
-        <p class="price">R3,500 / month</p>
-        <ul>
-          <li>✔ 1–2 hrs/day</li>
-          <li>✔ Up to 10 emails/day</li>
-          <li>✔ Admin support</li>
-          <li>✔ 24h response</li>
-        </ul>
-      </div>
+  <div class="toggle">
+    <span>Monthly</span>
+    <label class="switch">
+      <input type="checkbox" id="pricingToggle">
+      <span class="slider"></span>
+    </label>
+    <span>Yearly</span>
+  </div>
 
-      <div class="pricing-card">
-        <h3>Growth</h3>
-        <p class="price">R6,500 / month</p>
-        <ul>
-          <li>✔ Up to 3 hrs/day</li>
-          <li>✔ Up to 20 emails/day</li>
-          <li>✔ Priority tasks</li>
-          <li>✔ Weekly reports</li>
-        </ul>
-      </div>
+  <div class="grid">
+    <div class="card">
+      <h3>Starter</h3>
+      <p class="price" data-month="3500" data-year="3000">R3,500</p>
+    </div>
 
-      <div class="pricing-card">
-        <h3>Pro</h3>
-        <p class="price">R9,500 / month</p>
-        <ul>
-          <li>✔ Up to 4 hrs/day</li>
-          <li>✔ Up to 30 emails/day</li>
-          <li>✔ Priority responses</li>
-          <li>✔ Full admin support</li>
-        </ul>
-      </div>
+    <div class="card">
+      <h3>Growth</h3>
+      <p class="price" data-month="6500" data-year="5500">R6,500</p>
+    </div>
+
+    <div class="card">
+      <h3>Pro</h3>
+      <p class="price" data-month="9500" data-year="8000">R9,500</p>
     </div>
   </div>
 </section>
 
-<!-- ABOUT -->
 <section id="about" class="section">
-  <div class="container">
-    <h2 class="section-title">About NexaServe</h2>
-    <p>
-      NexaServe is a South Africa–based fractional support service built for small
-      businesses that need reliable help without the overhead of full-time staff.
-    </p>
-  </div>
+  <h2>About</h2>
+  <p>NexaServe helps small businesses scale with flexible support.</p>
 </section>
 
-<!-- GOALS & VALUES -->
-<section id="values" class="section">
-  <div class="container">
-    <h2 class="section-title">Our Goals & Values</h2>
+<section id="trial" class="section">
+  <h2>Start Free Trial</h2>
 
-    <div class="values-grid">
-      <div class="value-card">
-        <h3>Clarity</h3>
-        <p>Clear communication, pricing, and expectations.</p>
-      </div>
+  <form action="https://formsubmit.co/nexaserve.help@gmail.com" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="What support do you need?" required></textarea>
 
-      <div class="value-card">
-        <h3>Reliability</h3>
-        <p>Consistent support you can depend on.</p>
-      </div>
+    <input type="hidden" name="_subject" value="New NexaServe Lead!">
+    <input type="hidden" name="_captcha" value="false">
 
-      <div class="value-card">
-        <h3>Efficiency</h3>
-        <p>Focused daily support that gets real work done.</p>
-      </div>
-
-      <div class="value-card">
-        <h3>Partnership</h3>
-        <p>We work as an extension of your business.</p>
-      </div>
-    </div>
-  </div>
+    <button type="submit" class="btn-primary">Start Free Trial</button>
+  </form>
 </section>
 
-<!-- FREE TRIAL -->
-<section id="trial" class="section trial-section">
-  <div class="container">
-    <h2 class="section-title">Try NexaServe Free for 7 Days</h2>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-    <div class="trial-card">
-      <form>
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea placeholder="What support do you need?" required></textarea>
-        <button type="submit" class="btn-primary">Start Free Trial</button>
-      </form>
-    </div>
-  </div>
-</section>
+<script>
+AOS.init();
 
-<!-- FOOTER -->
-<footer class="site-footer">
-  <div class="footer-container">
-    <p class="footer-brand">© 2026 NexaServe</p>
+// MENU
+const hamburger = document.getElementById('hamburger');
+const nav = document.querySelector('.nav-links');
+const overlay = document.getElementById('overlay');
+const links = document.querySelectorAll('.nav-links a');
 
-    <p class="footer-contact">
-      <a href="mailto:nexaserve.help@gmail.com">nexaserve.help@gmail.com</a>
-      <span class="divider">•</span>
-      072 896 6332
-    </p>
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('active');
+  nav.classList.toggle('active');
+  overlay.classList.toggle('active');
+});
 
-    <p class="footer-note">
-      Email preferred • Responses within 12–24 hours
-    </p>
-  </div>
-</footer>
+overlay.addEventListener('click', () => {
+  hamburger.classList.remove('active');
+  nav.classList.remove('active');
+  overlay.classList.remove('active');
+});
+
+links.forEach(link => {
+  link.addEventListener('click', () => {
+    hamburger.classList.remove('active');
+    nav.classList.remove('active');
+    overlay.classList.remove('active');
+  });
+});
+
+// PRICING TOGGLE
+const toggle = document.getElementById('pricingToggle');
+const prices = document.querySelectorAll('.price');
+
+toggle.addEventListener('change', () => {
+  prices.forEach(price => {
+    const value = toggle.checked 
+      ? price.dataset.year 
+      : price.dataset.month;
+
+    price.textContent = "R" + value;
+  });
+});
+</script>
 
 </body>
 </html>
