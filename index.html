@@ -2,61 +2,92 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>NexaServe – Fractional Support</title>
+  <title>NexaServe – Fractional Customer & Admin Support</title>
 
-  <!-- FAVICON -->
+  <!-- Favicon -->
   <link rel="icon" href="/favicon.png" type="image/png">
 
-  <!-- FONT -->
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 
   <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-<div class="overlay" id="overlay"></div>
 
 <!-- NAVBAR -->
 <header class="header">
   <div class="nav-container">
     <h1 class="logo">NexaServe</h1>
-
     <ul class="nav-links">
       <li><a href="#home">Home</a></li>
       <li><a href="#services">Services</a></li>
+      <li><a href="#why-us">Why Choose Us</a></li>
       <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#about">About</a></li>
       <li><a href="#trial">Contact</a></li>
     </ul>
-
     <div class="hamburger" id="hamburger">
       <span></span><span></span><span></span>
     </div>
   </div>
 </header>
+<div class="overlay" id="overlay"></div>
 
 <!-- HERO -->
 <section id="home" class="hero">
   <h2>Fractional Customer & Admin Support</h2>
-  <p>Professional support without full-time costs.</p>
+  <p>Professional support without the overhead of full-time staff.</p>
   <a href="#pricing" class="btn-primary">View Pricing</a>
 </section>
 
 <!-- SERVICES -->
 <section id="services" class="section">
-  <h2>Services</h2>
+  <h2 class="section-title">What We Help With</h2>
   <div class="grid">
-    <div class="card">Customer Email Support</div>
-    <div class="card">Admin Tasks</div>
-    <div class="card">Weekly Reports</div>
+    <div class="card">
+      <h3>Customer Email Support</h3>
+      <p>Professional, brand-aligned responses to your customers.</p>
+    </div>
+    <div class="card">
+      <h3>Admin Tasks</h3>
+      <p>Invoicing, scheduling, follow-ups, and CRM updates.</p>
+    </div>
+    <div class="card">
+      <h3>Weekly Reports</h3>
+      <p>Clear summaries of completed work and customer insights.</p>
+    </div>
   </div>
 </section>
 
+<!-- WHY CHOOSE US -->
+<section id="why-us" class="section">
+  <h2 class="section-title">Why Choose NexaServe</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Fractional & Flexible</h3>
+      <p>Get expert support without hiring full-time staff.</p>
+    </div>
+    <div class="card">
+      <h3>Predictable Pricing</h3>
+      <p>Simple monthly packages with no hidden costs.</p>
+    </div>
+    <div class="card">
+      <h3>Reliable Response Times</h3>
+      <p>Guaranteed 12–24 hour responses during support hours.</p>
+    </div>
+    <div class="card">
+      <h3>South Africa Based</h3>
+      <p>Local understanding with global professionalism.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
 <section id="pricing" class="section">
-  <h2 class="section-title">Simple Pricing</h2>
+  <h2 class="section-title">Simple, Predictable Pricing</h2>
   <p class="section-sub">Save up to 15% with yearly plans</p>
 
   <div class="toggle">
@@ -69,41 +100,40 @@
   </div>
 
   <div class="grid pricing-grid">
-
     <div class="card pricing-card">
       <h3>Starter</h3>
       <p class="price" data-month="3500" data-year="30000">R3,500 / month</p>
       <p class="desc">Best for small businesses</p>
     </div>
-
     <div class="card pricing-card featured">
       <span class="badge">Most Popular</span>
       <h3>Growth</h3>
       <p class="price" data-month="6500" data-year="55000">R6,500 / month</p>
       <p class="desc">For growing businesses</p>
     </div>
-
     <div class="card pricing-card">
       <h3>Pro</h3>
       <p class="price" data-month="9500" data-year="80000">R9,500 / month</p>
       <p class="desc">Full support solution</p>
     </div>
-
   </div>
 </section>
 
-<!-- CONTACT -->
-<section id="trial" class="section">
-  <h2>Start Free Trial</h2>
+<!-- ABOUT -->
+<section id="about" class="section">
+  <h2 class="section-title">About NexaServe</h2>
+  <p>NexaServe is a South Africa–based fractional support service built for small businesses that need reliable help without the overhead of full-time staff. Our team combines expertise, flexibility, and professionalism to help your business grow.</p>
+</section>
 
+<!-- CONTACT / FREE TRIAL -->
+<section id="trial" class="section">
+  <h2 class="section-title">Try NexaServe Free for 7 Days</h2>
   <form action="https://formsubmit.co/nexaserve.help@gmail.com" method="POST">
     <input type="text" name="name" placeholder="Your Name" required>
     <input type="email" name="email" placeholder="Your Email" required>
     <textarea name="message" placeholder="What support do you need?" required></textarea>
-
     <input type="hidden" name="_subject" value="New NexaServe Lead!">
     <input type="hidden" name="_captcha" value="false">
-
     <button type="submit" class="btn-primary">Start Free Trial</button>
   </form>
 </section>
@@ -111,10 +141,7 @@
 <!-- FOOTER -->
 <footer>
   <p>© 2026 NexaServe</p>
-  <p>
-    <a href="mailto:nexaserve.help@gmail.com">nexaserve.help@gmail.com</a>
-    • 072 896 6332
-  </p>
+  <p><a href="mailto:nexaserve.help@gmail.com">nexaserve.help@gmail.com</a> • 072 896 6332</p>
 </footer>
 
 <!-- SCRIPT -->
@@ -135,18 +162,13 @@ overlay.addEventListener('click', () => {
   overlay.classList.remove('active');
 });
 
-// PRICING FIX
+// PRICING TOGGLE
 const toggle = document.getElementById('pricingToggle');
 const prices = document.querySelectorAll('.price');
-
 toggle.addEventListener('change', () => {
   prices.forEach(price => {
-    const value = toggle.checked 
-      ? price.dataset.year 
-      : price.dataset.month;
-
+    const value = toggle.checked ? price.dataset.year : price.dataset.month;
     const label = toggle.checked ? " / year" : " / month";
-
     price.textContent = "R" + value + label;
   });
 });
