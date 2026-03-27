@@ -4,17 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <title>NexaServe – Fractional Customer & Admin Support</title>
-  <meta name="description" content="Fractional customer service & admin support for small businesses in South Africa."/>
+  <title>NexaServe – Fractional Support</title>
 
   <!-- FAVICON -->
   <link rel="icon" href="/favicon.png" type="image/png">
 
   <!-- FONT -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-
-  <!-- AOS -->
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 
   <!-- CSS -->
   <link rel="stylesheet" href="style.css">
@@ -24,19 +20,17 @@
 
 <div class="overlay" id="overlay"></div>
 
+<!-- NAVBAR -->
 <header class="header">
-  <div class="container nav-container">
+  <div class="nav-container">
     <h1 class="logo">NexaServe</h1>
 
-    <nav>
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#pricing">Pricing</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#trial">Free Trial</a></li>
-      </ul>
-    </nav>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#trial">Contact</a></li>
+    </ul>
 
     <div class="hamburger" id="hamburger">
       <span></span><span></span><span></span>
@@ -44,21 +38,24 @@
   </div>
 </header>
 
+<!-- HERO -->
 <section id="home" class="hero">
-  <h2 data-aos="fade-up">Fractional Customer & Admin Support</h2>
-  <p data-aos="fade-up" data-aos-delay="100">Professional support without full-time costs.</p>
-  <a href="#pricing" class="btn-primary" data-aos="fade-up" data-aos-delay="200">View Pricing</a>
+  <h2>Fractional Customer & Admin Support</h2>
+  <p>Professional support without full-time costs.</p>
+  <a href="#pricing" class="btn-primary">View Pricing</a>
 </section>
 
+<!-- SERVICES -->
 <section id="services" class="section">
   <h2>Services</h2>
   <div class="grid">
-    <div class="card" data-aos="fade-up">Customer Email Support</div>
-    <div class="card" data-aos="fade-up" data-aos-delay="100">Admin Tasks</div>
-    <div class="card" data-aos="fade-up" data-aos-delay="200">Weekly Reports</div>
+    <div class="card">Customer Email Support</div>
+    <div class="card">Admin Tasks</div>
+    <div class="card">Weekly Reports</div>
   </div>
 </section>
 
+<!-- PRICING -->
 <section id="pricing" class="section">
   <h2>Pricing</h2>
 
@@ -74,26 +71,22 @@
   <div class="grid">
     <div class="card">
       <h3>Starter</h3>
-      <p class="price" data-month="3500" data-year="3000">R3,500</p>
+      <p class="price" data-month="3500" data-year="30000">R3,500 / month</p>
     </div>
 
     <div class="card">
       <h3>Growth</h3>
-      <p class="price" data-month="6500" data-year="5500">R6,500</p>
+      <p class="price" data-month="6500" data-year="55000">R6,500 / month</p>
     </div>
 
     <div class="card">
       <h3>Pro</h3>
-      <p class="price" data-month="9500" data-year="8000">R9,500</p>
+      <p class="price" data-month="9500" data-year="80000">R9,500 / month</p>
     </div>
   </div>
 </section>
 
-<section id="about" class="section">
-  <h2>About</h2>
-  <p>NexaServe helps small businesses scale with flexible support.</p>
-</section>
-
+<!-- CONTACT -->
 <section id="trial" class="section">
   <h2>Start Free Trial</h2>
 
@@ -109,16 +102,20 @@
   </form>
 </section>
 
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 NexaServe</p>
+  <p>
+    <a href="mailto:nexaserve.help@gmail.com">nexaserve.help@gmail.com</a>
+    • 072 896 6332
+  </p>
+</footer>
 
+<!-- SCRIPT -->
 <script>
-AOS.init();
-
-// MENU
 const hamburger = document.getElementById('hamburger');
 const nav = document.querySelector('.nav-links');
 const overlay = document.getElementById('overlay');
-const links = document.querySelectorAll('.nav-links a');
 
 hamburger.addEventListener('click', () => {
   hamburger.classList.toggle('active');
@@ -132,15 +129,7 @@ overlay.addEventListener('click', () => {
   overlay.classList.remove('active');
 });
 
-links.forEach(link => {
-  link.addEventListener('click', () => {
-    hamburger.classList.remove('active');
-    nav.classList.remove('active');
-    overlay.classList.remove('active');
-  });
-});
-
-// PRICING TOGGLE
+// PRICING FIX
 const toggle = document.getElementById('pricingToggle');
 const prices = document.querySelectorAll('.price');
 
@@ -150,7 +139,9 @@ toggle.addEventListener('change', () => {
       ? price.dataset.year 
       : price.dataset.month;
 
-    price.textContent = "R" + value;
+    const label = toggle.checked ? " / year" : " / month";
+
+    price.textContent = "R" + value + label;
   });
 });
 </script>
