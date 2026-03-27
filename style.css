@@ -150,78 +150,87 @@ body {
   box-shadow: 0 10px 25px rgba(0,0,0,0.05);
 }
 
-/* PRICE */
-.price {
-  font-size: 26px;
-  font-weight: 700;
+/* GLOBAL */
+body {
+  background: #f9fafb;
+  color: #111;
+}
+
+/* SECTION HEADERS */
+.section-title {
+  font-size: 32px;
+  font-weight: 800;
+}
+
+.section-sub {
+  color: #666;
   margin-top: 10px;
 }
 
-/* TOGGLE */
-.toggle {
+/* HERO FIX */
+.hero {
+  padding-top: 100px;
+}
+
+/* GRID FIX */
+.grid {
+  max-width: 1100px;
+  margin: 40px auto;
   display: flex;
+  gap: 25px;
   justify-content: center;
-  gap: 10px;
-  margin: 20px 0;
+  flex-wrap: wrap;
 }
 
-.switch {
-  position: relative;
-  width: 50px;
-  height: 25px;
-}
-
-.switch input {
-  display: none;
-}
-
-.slider {
-  position: absolute;
-  background: #ddd;
-  width: 100%;
-  height: 100%;
-  border-radius: 25px;
-}
-
-.slider::before {
-  content: "";
-  position: absolute;
-  width: 20px;
-  height: 20px;
+/* CARDS */
+.card {
   background: white;
-  top: 2.5px;
-  left: 3px;
-  border-radius: 50%;
-  transition: 0.3s;
-}
-
-input:checked + .slider::before {
-  transform: translateX(24px);
-}
-
-/* FORM */
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  width: 300px;
-  margin: auto;
-}
-
-input, textarea {
-  padding: 12px;
-  border-radius: 8px;
-  border: 1px solid #ddd;
-}
-
-/* FOOTER */
-footer {
-  background: #111;
-  color: white;
-  padding: 40px 20px;
+  padding: 30px;
+  border-radius: 14px;
+  width: 280px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
   text-align: center;
 }
 
-footer a {
-  color: #d4af37;
+/* PRICING CARDS */
+.pricing-card {
+  position: relative;
+}
+
+/* FEATURED PLAN */
+.featured {
+  border: 2px solid #d4af37;
+  transform: scale(1.05);
+}
+
+/* BADGE */
+.badge {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #d4af37;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+/* PRICE */
+.price {
+  font-size: 30px;
+  font-weight: 800;
+  margin: 15px 0;
+}
+
+/* DESCRIPTION */
+.desc {
+  color: #666;
+}
+
+/* FOOTER FIX */
+footer {
+  margin-top: 60px;
+  background: #111;
+  color: white;
+  padding: 50px 20px;
 }
