@@ -57,7 +57,9 @@
   <section class="section about-section" id="about">
     <h2 class="section-title fade-left">About Us</h2>
     <p class="section-sub fade-left delay-1">
-      We are a team dedicated to delivering the best digital solutions, with quality and professionalism at our core.
+    </p>  At YourBrand, we specialize in providing exceptional customer service and professional administrative support for businesses of all sizes. Our mission is to help you streamline your operations, enhance client satisfaction, and free up your time so you can focus on growing your business.
+With a team of skilled professionals, we handle everything from managing customer inquiries, emails, and appointments to organizing files, reports, and internal workflows. We pride ourselves on reliability, efficiency, and a personal approach that ensures every client feels valued.
+Whether you need consistent support for your daily operations or temporary assistance for high-demand periods, YourBrand is your trusted partner for smooth, stress-free business management.
     </p>
     <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100"><path fill="#f4f6f8" fill-opacity="1" d="M0,64L48,58.7C96,53,192,43,288,64C384,85,480,139,576,149.3C672,160,768,128,864,112C960,96,1056,96,1152,101.3C1248,107,1344,117,1392,122.7L1440,128L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
   </section>
@@ -69,9 +71,7 @@
       <div class="card hover-scale fade-up">
         <i class="fas fa-shield-alt icon"></i>
         <h3>Integrity</h3>
-        <p>At YourBrand, we specialize in providing exceptional customer service and professional administrative support for businesses of all sizes. Our mission is to help you streamline your operations, enhance client satisfaction, and free up your time so you can focus on growing your business.
-With a team of skilled professionals, we handle everything from managing customer inquiries, emails, and appointments to organizing files, reports, and internal workflows. We pride ourselves on reliability, efficiency, and a personal approach that ensures every client feels valued.
-Whether you need consistent support for your daily operations or temporary assistance for high-demand periods, YourBrand is your trusted partner for smooth, stress-free business management.</p>
+        <p>We uphold the highest standards, delivering reliable and trustworthy support in every service we provide.</p>
       </div>
       <div class="card hover-scale fade-up delay-1">
         <i class="fas fa-lightbulb icon"></i>
@@ -109,62 +109,89 @@ Whether you need consistent support for your daily operations or temporary assis
     </div>
   </section>
 
-  <section class="section pricing-section" id="pricing">
+<!-- PRICING -->
+<section class="section pricing-section" id="pricing">
   <h2 class="section-title fade-right">Pricing Plans</h2>
   <div class="toggle">
     <span>Monthly</span>
     <label class="switch">
-      <input type="checkbox" id="price-toggle">
+      <input type="checkbox">
       <span class="slider"></span>
     </label>
-    <span>Yearly (Save 20%)</span>
+    <span>Yearly</span>
   </div>
   <div class="grid">
-    <!-- BASIC PLAN -->
+    <!-- Basic Plan -->
     <div class="card pricing-card hover-scale fade-up">
+      <div class="price"></div>
       <h3>Basic Plan</h3>
-      <p class="plan-details">
-        ✅ 2 hours of work per week<br>
-        ✅ 50 Emails per month<br>
-        ✅ 1 Social Media Platform Management<br>
-        ✅ Basic Support
-      </p>
-      <p class="price" data-month="R3500 A Month" data-year="R33,600 A Year">R3500 A Month</p>
       <p>Perfect for startups and small businesses.</p>
+      <ul>
+        <li>4 Hours of emails a day </li>
+        <li>Emails handled: 50</li>
+        <li>Admin support tasks: 10 tasks</li>
+      </ul>
     </div>
 
-    <!-- PRO PLAN -->
+    <!-- Pro Plan -->
     <div class="card pricing-card featured hover-scale fade-up delay-1">
       <div class="badge">Most Popular</div>
+      <div class="price"></div>
       <h3>Pro Plan</h3>
-      <p class="plan-details">
-        ✅ 5 hours of work per week<br>
-        ✅ 100 Emails per month<br>
-        ✅ Up to 2 Social Media Platforms<br>
-        ✅ Priority Support<br>
-        ✅ Monthly Strategy Call
-      </p>
-      <p class="price" data-month="R6500 A Month" data-year="R62,400 A Year">R6500 A Month</p>
       <p>Ideal for growing businesses needing more features.</p>
+      <ul>
+        <li>6 Hours of emails a day </li>
+        <li>Emails handled: 150</li>
+        <li>Admin support tasks: 25 tasks</li>
+      </ul>
     </div>
 
-    <!-- ENTERPRISE PLAN -->
+    <!-- Enterprise Plan -->
     <div class="card pricing-card hover-scale fade-up delay-2">
+      <div class="price"></div>
       <h3>Enterprise Plan</h3>
-      <p class="plan-details">
-        ✅ 6 hours of work per week<br>
-        ✅ Unlimited Emails<br>
-        ✅ Up to 5 Social Media Platforms<br>
-        ✅ Priority Support<br>
-        ✅ Dedicated Account Manager<br>
-        ✅ Weekly Strategy Call
-      </p>
-      <p class="price" data-month="R9500 A Month" data-year="R91,200 A Year">R9500 A Month</p>
-      <p>Best for businesses needing full support within manageable hours.</p>
+      <p>Best for larger businesses requiring full support.</p>
+      <ul>
+        <li>8 Hours of emails a day</li>
+        <li>Emails handled: 500</li>
+        <li>Admin support tasks: 50 tasks</li>
+      </ul>
     </div>
   </div>
 </section>
 
+<script>
+  const toggle = document.querySelector('.switch input');
+  const pricingCards = document.querySelectorAll('.pricing-card');
+
+  // Monthly prices
+  const monthlyPrices = {
+    basic: 3500,
+    pro: 6500,
+    enterprise: 9500
+  };
+
+  // Function to update prices
+  function updatePrices() {
+    pricingCards.forEach(card => {
+      let planName = card.querySelector('h3').innerText.toLowerCase();
+      let planKey = planName.includes('basic') ? 'basic' :
+                    planName.includes('pro') ? 'pro' : 'enterprise';
+      if(toggle.checked){ // Yearly
+        let yearlyPrice = Math.round(monthlyPrices[planKey] * 12 * 0.8);
+        card.querySelector('.price').innerText = `R${yearlyPrice} / year`;
+      } else { // Monthly
+        card.querySelector('.price').innerText = `R${monthlyPrices[planKey]} / month`;
+      }
+    });
+  }
+
+  // Initialize prices on load
+  updatePrices();
+
+  // Listen for toggle switch
+  toggle.addEventListener('change', updatePrices);
+</script>
   <!-- CONTACT -->
   <section class="section contact-section" id="contact">
     <h2 class="section-title fade-up">Contact Us</h2>
