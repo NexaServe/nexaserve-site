@@ -225,6 +225,22 @@ Whether you need consistent support for your daily operations or temporary assis
       overlay.classList.remove('active');
     });
 
+   <!-- Existing JS for hamburger and fade-in animations -->
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    const overlay = document.querySelector('.overlay');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      overlay.classList.toggle('active');
+    });
+
+    overlay.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+      overlay.classList.remove('active');
+    });
+
     // Fade-in animations
     const faders = document.querySelectorAll('.fade-up, .fade-left, .fade-right');
     const appearOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
@@ -236,6 +252,23 @@ Whether you need consistent support for your daily operations or temporary assis
       });
     }, appearOptions);
     faders.forEach(fader => appearOnScroll.observe(fader));
+  </script>
+
+  <!-- ADD STEP 1 BELOW THIS -->
+  <script>
+    const toggle = document.querySelector('.switch input');
+    const prices = document.querySelectorAll('.pricing-card .price');
+
+    const monthlyPrices = ["R3500", "R6500", "R9500"];
+    const yearlyPrices = ["R33,600", "R62,400", "R91,200"];
+
+    toggle.addEventListener('change', () => {
+      if(toggle.checked){
+        prices.forEach((price, i) => price.textContent = yearlyPrices[i]);
+      } else {
+        prices.forEach((price, i) => price.textContent = monthlyPrices[i]);
+      }
+    });
   </script>
 </body>
 </html>
