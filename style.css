@@ -9,6 +9,9 @@
 body {
   background: #f4f6f8;
   color: #1a1a1a;
+
+  /* prevents content from being hidden behind floating button */
+  padding-bottom: 90px;
 }
 
 /* NAVBAR */
@@ -117,6 +120,11 @@ body {
   opacity: 0.9;
 }
 
+/* 🔥 HIDE HERO BUTTON (you wanted moving one only) */
+.hero .btn-primary {
+  display: none;
+}
+
 /* SECTIONS */
 .section {
   padding: 80px 20px;
@@ -188,18 +196,27 @@ body {
   margin: 15px 0;
 }
 
-/* PRICING TOGGLE */
+/* 🔥 FIXED TOGGLE (no overlap) */
 .toggle {
   display: flex;
   justify-content: center;
-  gap: 10px;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  text-align: center;
   margin: 20px 0;
+}
+
+.toggle span {
+  display: inline-block;
+  line-height: 1.2;
 }
 
 .switch {
   position: relative;
   width: 50px;
   height: 25px;
+  flex-shrink: 0;
 }
 
 .switch input {
@@ -263,6 +280,7 @@ footer a {
   .hamburger {
     display: flex;
   }
+
   .nav-links {
     position: fixed;
     right: -100%;
@@ -276,11 +294,27 @@ footer a {
     transition: 0.4s;
     z-index: 1001;
   }
+
   .nav-links.active {
     right: 0;
   }
+
+  /* improve toggle on small screens */
+  .toggle {
+    gap: 8px;
+    padding: 0 12px;
+  }
+
+  .toggle span {
+    font-size: 14px;
+  }
+
+  .switch {
+    transform: scale(0.95);
+  }
 }
-/* ICONS IN CARDS */
+
+/* ICONS */
 .icon {
   font-size: 40px;
   color: #0066cc;
@@ -294,7 +328,7 @@ footer a {
   height: 100px;
 }
 
-/* MOBILE STICKY BUTTON */
+/* 🔥 FLOATING BUTTON ALWAYS VISIBLE */
 .mobile-btn {
   position: fixed;
   bottom: 20px;
@@ -306,17 +340,17 @@ footer a {
   font-weight: 700;
   text-decoration: none;
   z-index: 999;
-  display: none;
+  display: block !important;
   box-shadow: 0 8px 20px rgba(0,102,204,0.3);
   transition: 0.3s;
 }
-.mobile-btn:hover { opacity: 0.95; transform: scale(1.05); }
 
-@media(max-width: 768px){
-  .mobile-btn { display: block; }
+.mobile-btn:hover {
+  opacity: 0.95;
+  transform: scale(1.05);
 }
 
-/* FADE-IN ANIMATIONS */
+/* ANIMATIONS */
 .fade-up { opacity: 0; transform: translateY(20px); transition: all 0.8s ease-out; }
 .fade-left { opacity: 0; transform: translateX(-20px); transition: all 0.8s ease-out; }
 .fade-right { opacity: 0; transform: translateX(20px); transition: all 0.8s ease-out; }
@@ -324,7 +358,7 @@ footer a {
 .delay-1 { transition-delay: 0.2s; }
 .delay-2 { transition-delay: 0.4s; }
 
-/* HOVER EFFECT FOR CARDS */
+/* HOVER */
 .card:hover, .pricing-card:hover {
   transform: translateY(-10px) scale(1.05);
   box-shadow: 0 15px 30px rgba(0,0,0,0.15);
