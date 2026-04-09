@@ -486,3 +486,64 @@ footer a {
 .toggle span:first-child {
   opacity: 0.6;
 }
+
+/* WHAT WE DO SECTION */
+.services-intro {
+  max-width: 850px;
+  margin: 16px auto 0;
+  line-height: 1.7;
+}
+
+.services-grid {
+  max-width: 1200px;
+  margin: 40px auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.service-card {
+  background: #ffffff;
+  border: 1px solid #d9e4f2;
+  border-radius: 18px;
+  padding: 28px 24px;
+  text-align: left;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  transition: 0.3s ease;
+}
+
+.service-card h3 {
+  color: #0066cc;
+  margin-bottom: 12px;
+  font-size: 22px;
+}
+
+.service-card p {
+  color: #4a4a4a;
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.10);
+}
+
+.pricing-note {
+  margin-top: 28px;
+  font-size: 15px;
+  color: #555;
+  font-weight: 600;
+}
+
+@media (max-width: 992px) {
+  .services-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
